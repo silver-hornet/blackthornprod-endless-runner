@@ -4,6 +4,14 @@ public class Obstacle : MonoBehaviour
 {
     [SerializeField] int damage = 1;
     [SerializeField] float speed;
+    [SerializeField] GameObject effect;
+    Shake shake;
+    [SerializeField] GameObject explosionSound;
+
+    void Start()
+    {
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+    }
 
     void Update()
     {
@@ -14,6 +22,9 @@ public class Obstacle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Instantiate(explosionSound, transform.position, Quaternion.identity);
+            shake.CamShake();
+            Instantiate(effect, transform.position, Quaternion.identity);
             other.GetComponent<Player>().health -= damage;
             Destroy(gameObject);
         }

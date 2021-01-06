@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5710123222773510150}
   - component: {fileID: 5710123222773510168}
   - component: {fileID: 5710123222773510169}
+  - component: {fileID: 7076944602463075537}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +99,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8349949
+  m_Radius: 0.60544646
 --- !u!114 &5710123222773510169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +114,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   speed: 5
+  effect: {fileID: 8174603000993321444, guid: 63b8f7e9f8abd439bbd498c7ab0aa159, type: 3}
+  explosionSound: {fileID: 4927396779515428840, guid: aba4c748bad5e4501bc807ff84be4277,
+    type: 3}
+--- !u!114 &7076944602463075537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710123222773510149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fc0aadd31464e92b158376df58c83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 10
